@@ -1,0 +1,74 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+ul li{
+	list-style-type: none;
+}
+body,html{
+  width: 100%;
+  overflow:height;
+
+}
+
+.headline h3{
+   width: 100%;
+   text-align: center;
+}
+
+.head{
+   width: 95%;
+   margin:0 auto;
+}
+
+
+.commodity div:nth-child(1){
+   float:left; 
+}
+
+.price{
+	margin-right: 0.2778rem;
+	 float:right; 
+	 color:red;
+}
+
+.upload ul{
+	width: 100%;
+	display: flex;	
+}
+.upload ul li{
+	flex:1;
+}
+.upload ul li img{
+	width: 0.7407rem;
+ 	height: 0.7407rem;
+}
+
+.evaluate{
+	clear: both;
+	width:100%;
+	height: 0.6204rem;
+	vertical-align: middle;  /*ÔªËØ¾ÓÖÐ*/
+}
+.evaluate p{
+
+	    width: 60%;
+	   height: 0.6204rem;
+	   line-height: 0.6204rem; 
+}
+.evaluate ul{
+		 width: 40%;
+		 float: right;
+}
+.evaluate ul li{
+	   height: 0.6204rem;
+	   float: left;
+	   line-height: 0.6204rem;
+}
+.evaluate ul li img{
+		width:0.5556rem;
+		height:0.5556rem;
+}
+

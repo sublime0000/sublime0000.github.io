@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/instant-comment.css">
+	<script src="js/flexible.js"></script>
+</head>
+<body>
+	<div class="head">
+
+       <div class="headline">
+         <h3>评价晒单</h3>
+       </div>
+       <a href="goodslist.html" >dsadsad</a>
+       <div>
+	         <div class="commodity">
+	              <div>
+	                  <img src="img/instant-comment/pic-1.png">
+	              </div>
+	              <div>
+	                   <p>秋冬款韩版低圆领中长款宽松套头打底毛衣</p>
+	                   <div><span>颜色：</span><span>白色；</span><span>尺码：</span><span>均码；</span></div>
+	                   <div><span class="price">￥69.00</span></div>
+	              </div>
+	         </div>
+
+	         <div class="evaluate">
+	            
+	            <ul>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	            </ul>
+	            <p>描述相符</p>
+	         </div>  
+       </div>
+
+       <div>
+		       <form>
+		          <textarea width="95%" height="0.8889rem" >请输入你的评价</textarea>	
+		       </form>
+       </div>
+       
+       <div class="upload">
+	          <ul>
+	             <li><img src="img/instant-comment/pic-3-1.png"></li>
+	             <li><img src="img/instant-comment/pic-3-2.png"></li>
+	             <li><img src="img/instant-comment/pic-3-2.png"></li>
+	             <li><img src="img/instant-comment/pic-3-2.png"></li>
+	             <li><img src="img/instant-comment/pic-3-2.png"></li>
+	             <li><img src="img/instant-comment/pic-3-2.png"></li>
+	          </ul>
+       </div>
+
+       <div>
+              <p>店铺评分</p>
+       </div>
+
+       <div class="evaluate">	            
+	            <ul id="">
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	            </ul>
+	            <p>质量满分</p>
+       </div>  
+
+       <div class="evaluate">
+	            
+	            <ul>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	                <li><img src="img/instant-comment/icon-d.png"></li>
+	            </ul>
+	            <p>服务态度</p>
+       </div>
+
+       <div class="evaluate">
+            <ul>
+                <li><img src="img/instant-comment/icon-d.png"></li>
+                <li><img src="img/instant-comment/icon-d.png"></li>
+                <li><img src="img/instant-comment/icon-d.png"></li>
+                <li><img src="img/instant-comment/icon-d.png"></li>
+                <li><img src="img/instant-comment/icon-d.png"></li>
+            </ul>
+            <p>物流服务</p>
+
+       </div>  
+
+	</div>
+
+
+
+
+	<script src="js/instant-comment.js"></script>
+	<script>
+    
+     !function(){
+
+
+     	       // 获取CLASS   存入变量
+       var a = document.getElementsByClassName("evaluate");
+       // var b = a.getElementsByTagName("li");
+           
+
+
+           // 获取所有的ul;   
+         for(var i = 0; i<a.length;i++){
+         	var c = a[i].getElementsByTagName("li");
+
+         	kengbi(c);
+         }
+
+
+            // 对li操作；
+			function kengbi(qwer){
+			for(var i = 0; i<qwer.length; i++){
+				qwer[i].index = i;
+
+				qwer[i].onclick = function(){
+					for(var j =this.index+1; j<qwer.length; j++){
+						qwer[j].innerHTML = "<img src='img/instant-comment/icon-d.png'>";
+						qwer[j].toggle = false;
+					}
+					var length = this.index+1;
+					if(this.toggle){
+						for(var j =0; j<qwer.length; j++){
+						qwer[j].innerHTML = "<img src='img/instant-comment/icon-d.png'>";
+						qwer[j].toggle = false;
+						}
+					}else{
+						for(var sb = 0; sb<length; sb++){
+							qwer[sb].innerHTML = "<img src='img/instant-comment/icon-u.png'>";
+							qwer[sb].toggle = true;
+						}
+					}
+					
+				}
+			}
+		}
+
+
+     }()
+  
+	
+	</script>
+</body>
+</html>
