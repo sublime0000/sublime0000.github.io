@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+	* { margin: 0; padding: 0; border: 0; }
+	html { height: 100%; }
+	body { height: 100%; font-family: "Microsoft YaHei"; font-size: 12px; color:#888d94; }
+	img { display: block; }
+	li { list-style-type: none; }
+	.w1190 { width: 1190px; margin:0 auto; }
+	.w1800 { max-width: 1800px; min-width: 1190px; margin: 0 50px; }
+	.w1800_day14 { max-width: 1810px; min-width: 1290px; }
+	#wrap_day12 { max-width: 1800px; min-width: 1190px; height: 946px; position: relative; }
+	#ul_day12 {  overflow: hidden; position: absolute; left: 0; top: 0; width: 5400px; }
+	#ul_day12 li {  float: left; }
+	#ul_day12 li img { width: 1800px; }
+	#prev_day12,#next_day12 { width: 20px; height: 84px; line-height: 84px; text-align: center; opacity: 0.6; color:white; font-size: 20px; position: absolute; margin-top: -42px; z-index: 999; }
+	#prev_day12 { left: 0; background: url("../images/photo.png") 0 -20px no-repeat; animation: prev_day_move 1.5s ease; animation-fill-mode: forwards;}
+	#next_day12 { right: 0; background: url("../images/photo.png") -20px -20px no-repeat; animation: next_day_move 1.5s ease; animation-fill-mode: forwards;}
+	#main_day12 {}
+	#main_day12 .main_day12_door { height: 1050px; position: relative; padding-top: 10px; }
+	#main_day12 .main_smail { position: absolute; margin-top: -30px; left: 50%; margin-left: -42px; width: 84px; height: 20px; background: url("../images/photo.png")-81px 0 no-repeat; transition: all 0.6s; }
+	#main_day12 .main_left { width: 442px; height: 1050px; float: left; }
+	#main_day12 .main_left2 { width: 432px; height: 405px;  padding: 50px 10px 0 0; border-bottom: 1px solid #e6e6e7; }
+	#main_day12 .main_left2 h2 { width: 213px; height: 25px; background: url("../images/main_left_concent.png")0 0 no-repeat; margin-bottom: 50px; }
+	#main_day12 .main_left2 p { line-height: 25px; margin-bottom: 40px; }
+
+	#main_day12 .main_left3 { width: 432px; height: 384px;  padding: 50px 10px 0 0; border-bottom: 1px solid #e6e6e7; }
+	#main_day12 .main_left3 h2 { width: 213px; height: 40px; background: url("../images/main_left2_concent.png")0 0 no-repeat; margin-bottom: 50px; }
+	#main_day12 .main_left3 p { line-height: 25px; margin-bottom: 40px;  }
+	#main_day12 .main_center { width: 302px; height: 1050px; float: left; }
+	#main_day12 .main_car { width: 257px; height: 127px; padding: 270px 0 0 50px; background: url("../images/20160530-7.gif")0 0 no-repeat; }
+	#main_day12 .main_car p { height: 25px; line-height: 25px; font-size: 14px; color:white;}
+	#main_day12 .main_car p span { display: block; float: left; padding-right: 5px;  font-size: 20px; }
+	#main_day12 .main_right { width: 430px;  height: 1050px; float: left; }
+	#main_day12 .main_right1 { height: 603px; margin-left: 17px; padding-top: 50px;  }
+	#main_day12 .main_right1 h2 { width: 263px; height: 25px; background: url("../images/main_right1_img.png")0 0 no-repeat; margin-bottom: 50px; }
+	#main_day12 .main_right1 ul {  }
+	#main_day12 .main_right1 ul li { width: 430px; height: 90px; overflow: hidden; border-bottom: 1px solid #e6e6e7; margin-top: 5px; }
+	#main_day12 .main_right1 ul li .main_list { width: 74px; height: 69px; margin: 8px 8px 0 8px; float: left; }
+	#main_day12 .main_right1 ul li .main_list2 { float: left; width: 340px; height: 69px; margin-top: 8px;}
+	#main_day12 .main_right1 ul li .main_list2 h4 { margin-bottom: 10px; }
+	#main_day12 .main_right1 ul li .main_list2 p { line-height: 20px; }
+	#main_right2 { width: 446px; height: 379px; position: relative; overflow: hidden; }
+	#main_right2 ul {position: absolute; width: 1784px; left: 0; top: 0; }
+	#main_right2 ul li { width: 446px; height: 379px; float: left; }
+	#main_right2 h2 { margin: 40px 0; }
+	#main_right2 p { line-height: 25px; }
+	#prev_list,#next_list { width: 40px; height: 30px; background: #e6e6e7; text-align: center; line-height: 30px; position: absolute;top: 141px; right: 0; transition: all 0.6s; font-size: 20px; color:#61666c; }
+
+	#prev_list { right:40px; }
+	#next_list { right:0px; }
+	#prev_list:hover { color:#e6e6e7; background: #61666c; }
+	#next_list:hover { color:#e6e6e7; background: #61666c; }
+	#main_day12 .div_main1 { padding-bottom: 30px; }
+	#main_day12 .main-centent { overflow: hidden; }
+	#main_day12 .main_smail:hover { margin-top: -25px; }
+	#main_day13 {}
+	#main_day13 .main_day13_door { /* height:850px; */ }
+	#main_day13 .main_day13_door h2 { padding: 80px 0px 50px; }
+	#main_day13 .main_day13_door h2 img { margin:0 auto; }
+	#main_day13 .main_day13_door p { width: 1000px; line-height: 25px; margin:0px auto 50px; text-align: center; }
+		#main_day13 .main_day13_door .mordf {  }
+	#main_day13 .main_day13_door .mordf img { max-width: 1800px; min-width: 1190px; width: 100%; }
+	#img_text {}
+	#img_text #run_day13 { position: relative; overflow: hidden; }
+	#img_text .img_day13 { width: 1150px; height: 185px; margin: 0 auto; position: relative; margin-top:-60px;}
+	#img_text .img_day13 img { width: 230px; height: 185px; float: left; }
+	#img_text .img_day13 .img_centent { width: 230px; height: 185px; float: left; background: #61666C; }
+	#img_text .img_day13 .img_centent2 { width: 210px; height: 165px; float: left; background: #dbdee1; padding: 10px; }
+	#img_text .img_day13 .img_centent3 { width: 230px; height: 185px; float: left; position: relative; }
+	#img_text .img_day13 .img_centent3 div { position: absolute; top: -36px; background: #61666C; width: 230px; height: 36px; color: white; font-size: 16px; text-align: center; line-height: 36px;  }
+	#img_text .img_day13 div ul { width: 690px; height: 185px; position: absolute; top: 0; left:0; }
+	#img_text .img_day13 div ul li { width: 210px; height: 165px; float: left; padding: 10px; }
+	#img_text .img_day13 div ul li h4 { width: 100%; line-height: 26px; float: left; color: white; padding: 3px 0; }
+	#img_text .img_day13 div ul li p { line-height: 20px; color:white; } 
+	#img_text .img_day13 .img_centent2 h4 { width: 100%; line-height: 30px; float: left; color: #61666C; padding: 3px 0; }
+	#img_text .img_day13 .img_centent2 p { line-height: 20px; color:#61666C; }
+    #img_text .img_text_day13 { position: relative; }
+    #science {}
+    #science .science_day13 h2{ width: 216px; height: 64px; background: url("../images/kj.png")0 0 no-repeat; margin: 60px auto 40px;}
+	#science .science_day13 .p1 { font-size: 14px; width: 830px; margin: 0 auto; line-height: 25px; text-align: center; margin-bottom:50px; }
+	#science .science_day13 .p2 { font-size: 15px; line-height: 25px; margin-bottom: 20px; }
+	#science .science_day13 .p2_r { font-size: 15px; line-height: 25px; margin-bottom: 20px; text-align: right; }
+	#science .science_day13 .img_p_r2 { margin-bottom: 20px; overflow: hidden; }
+	#science .science_day13 .img_p_r2 img { float: right; }
+	#science .science_day13 .img_p { margin-bottom: 20px; }
+	#science .science_centent { overflow: hidden; margin-bottom: 70px; }
+	#science .science_text p { line-height: 18px; color:white; }
+	#science .science_left { width: 442px; height: 450px; float: left; }
+	#science .science_center { width: 306px; height: 450px; float: left; position: relative; overflow: hidden; }
+	#science .science_center ul { width: 918px; height: 450px; position: absolute; left:0; }
+	#science .science_center ul li {width: 306px; height: 450px; float: left;}
+	#science .science_center .science_text { width: 290px; height: 144px; background: #61666C; padding-left: 16px; padding-top:15px; }
+	#science_prev,#science_next { width: 40px; height: 30px; background: #e6e6e7; text-align: center; line-height: 30px; position: absolute;bottom: 0px; left: 50%; transition: all 0.6s; font-size: 20px; color:#61666c; }
+	#science_prev { margin-left: -20px; }
+	#science_next { margin-left: 20px; }
+	#science_prev:hover { color:#e6e6e7; background: #61666c; }
+	#science_next:hover { color:#e6e6e7; background: #61666c; }
+	#science .science_right { width: 442px; height: 450px; float: left; }
+	#prev_run,#next_run { width: 10px; height: 10px; border-radius: 50%; position: absolute; bottom: 10px;  background: #c0c2c4; transition: all 0.6s; }
+	#prev_run { left:10px; }
+	#next_run { left: 35px; }
+	#prev_run:hover,#next_run:hover { background: white; }
+	#left { background: #f0f0f0; margin-bottom: 300px; }
+	#left .left_day13 { height: 520px; }
+	#left .left_day13 h2 { width: 214px; margin:0 auto; padding:50px 0; }
+	#left .left_day13 .left_p1 { text-align: center; line-height: 25px; font-size: 14px; }
+	#left .left_day13 .left_p2 { text-align: center; line-height: 25px; font-size: 14px; padding-bottom: 50px; }
+	#left #left_wrap { width: 1190px; height: 480px; position: relative; overflow: hidden; }
+	#left #left_wrap ul { position: absolute; width: 5950px;  left: 0; top: 0;  overflow: hidden;}
+	#left #left_wrap ul li { width: 1190px; height: 480px; float: left; }
+	#prev_left,#next_left { width: 36px; height:82px; line-height: 82px; text-align: center; top: 50%; margin-top: -41px; position: absolute; background: #e6e6e7; color: #a4a6aa; font-size: 30px; }
+	#prev_left { left: 0; }
+	#next_left { right: 0; }
+	#left_ul1 .left_text_day14 { width: 1190px; height: 40px; line-height: 40px; background:rgba(0,0,0,0.6); text-align: center; position: absolute; bottom: 0px; color: white; font-size: 18px; letter-spacing:3PX }
+	#left_ul1 .left_text_day14 a { color:red; text-decoration: underline; }
+	#image_day14 { position: relative; }
+	#image_day14 .content_day14 { width: 280px; height: 82px; position: absolute; top: 50%; left:50%; margin-top: -41px; margin-left: -140px; }
+	#image_day14 .content_day14_left { float: left; }
+	#image_day14 .content_day14_right { float: right; }
+	#login .ct-photo { height: 480px; width: 100%; background: url(../images/ct-photo.jpg)0 0 no-repeat; border:1px solid #c0c2c4; }
+	#login .ct-photo h2 { width: 100%; padding:40px 0; text-align: center; font-size: 20px; border-bottom: 1px solid #e3e5e5; margin-bottom: 40px; }
+	#login .ct-photo .login_left { width: 595px; height: 333px; float: left;}
+	#login .ct-photo .login_left h4 { padding:40px 0 40px 140px; font-size: 15px; }
+	#login .ct-photo .login_left p { line-height: 30px; padding-left:140px; }
+	#login .ct-photo .login_left div {overflow: hidden; padding-left:140px; }
+	#login .ct-photo .login_left div a{ display: block; float:left; width: 30px; height: 30px; background: url("../images/photo.png") 0 0 no-repeat; }
+	#login .ct-photo .login_left div .a1 { margin-right: 10px; background: url("../images/photo.png") -88px -20px no-repeat; }
+	#login .ct-photo .login_left div .a1:hover { background: url("../images/photo.png") -88px -50px no-repeat; }
+	#login .ct-photo .login_left div .a2 { background: url("../images/photo.png") -148px -20px no-repeat; }
+	#login .ct-photo .login_left div .a2:hover { background: url("../images/photo.png") -148px -50px no-repeat; }
+	#login .ct-photo .login_right { width: 595px; height: 333px; float: right; }
+	#login .ct-photo .login_right form { margin-left: 70px; background: rgba(,,,0.6); }
+	#login .ct-photo .login_right form input { width:370px; height: 40px; margin-bottom: 15px; outline: none; padding-left:10px; background: #bbb; color:#333;}
+	#login .ct-photo .login_right form textarea { width:360px; max-width: 360px; height: 121px; max-height: 161px; outline: none; padding: 10px;  background: #bbb; color:#333; }
+	#login .ct-photo .login_right form button { width: 380px; height: 40px; outline: none; background: white; color:#333; }
+	#footer { min-width: 1290px; height: 50px; background: #61666c; }
+	 #footer p {padding-top: 18px; width: 530px; color: white; float: right;}
+	 #footer p a { color:white; float: left; display: inline-block; }
+	 #footer p span { display: inline-block; color:white; float: left; }
+	 #footer p strong { display: inline-block; width: 30px; height: 30px; line-height: 24px; text-align: center; border-radius: 50%; background: #61666c; float: left; margin-top:-5px; transition: all 0.6s;}
+	 #footer p strong:hover { background: #000; }
+	.box { 
+		width: 50px;
+		height: 200px;
+		background: #61666c;
+		position: fixed;
+		transition: all 0.6s;
+		z-index: 999;
+	}
+	.logo { }
+	.logo_img {
+		width: 200px; 
+		height: 22px; 
+		display: block; 
+		opacity: 0;
+		background: url("../images/photo.png")0 -120px no-repeat; 
+		position: absolute;
+		left: 30px;
+		top: 25px;
+	}
+	.logo span { display: block; width: 20px; height: 20px; line-height: 20px; margin-left: -10px; text-align: center; position: absolute; left: 50%; font-size: 25px; color: white; font-weight: bold; }
+	.logo .spam_m { top: 26px; background: url("../images/photo.png")0 0 no-repeat; }
+	.logo .spam_e { top: 62px; background: url("../images/photo.png")-20px 0 no-repeat;}
+	.logo .spam_n { top: 96px; background: url("../images/photo.png")-40px 0 no-repeat;}
+	.logo .spam_u { top: 130px; background: url("../images/photo.png")-60px 0 no-repeat;}
+	.list { 
+		position: absolute; 
+		top: 95px; 
+		width: 100%; 
+		visibility: hidden;
+		opacity: 0; 
+	}
+	.list li { width: 100%; height: 50px; line-height: 50px; text-align: center; color:white; }
+	.content { width: 250px;height: 100%; background: #333; position: fixed; top: -10px; left: 250px; padding-top: 95px;visibility: hidden; z-index: 999; }
+	.content div { height: 49px; border-bottom: 1px solid #949393 }
+	.content div a { display: block; color:#949393; line-height: 49px; text-align: center; text-decoration: none; margin-left: 0px; }
+	.content div a:hover { color:white; }
+	.box:hover {
+		width: 250px; height: 100%;
+	}
+	.box:hover .spam_m { 
+		animation: move_spam_m 0.6s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes move_spam_m {
+		0% { top: 26px; left: 50%; }
+		50% { top: 26px; left: 30%; opacity: 1 }
+		100% { top: 26px; left: 10%; opacity: 0 }
+	}
+	.box:hover .spam_e{
+		animation: move_spam_e 0.6s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes move_spam_e {
+		0% { top: 62px; left: 50%; }
+		50% { top: 26px; left: 45%; opacity: 1 }
+		100% { top: 26px; left: 20%; opacity: 0 }
+	}
+	.box:hover .spam_n{
+		animation: move_spam_n 0.6s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes move_spam_n {
+		0% { top: 96px; left: 50%; }
+		50% { top: 26px; left: 55%; opacity: 1 }
+		100% { top: 26px; left: 80%; opacity: 0 }
+	}
+	.box:hover .spam_u{
+		animation: move_spam_u 0.6s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes move_spam_u {
+		0% { top: 96px; left: 50%; }
+		50% { top: 26px; left: 70%; opacity: 1 }
+		100% { top: 26px; left: 90%; opacity: 0 }
+	}
+	.box:hover .logo_img {
+		animation: move_logo_img 0.6s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes move_logo_img {
+		0% { display: none; }
+		50% { display: block; opacity: 0 }
+		100% { display: block; opacity: 1 }
+	}
+	.box:hover .list {
+		animation: move_list 0.6s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes move_list {
+		0% { }
+		50% { visibility: hidden; opacity: 0;  }
+		100% { visibility: visible; opacity: 1;  }
+	}
+	.list li { transition: all 0.2s; }
+	.list li:hover {
+		background: white; color:#61666c;
+	}
+	 .list li:hover .content {
+		animation: move_content 0.3s ease;
+		animation-fill-mode: forwards;
+	} 
+	@keyframes move_content {
+		from {  visibility: hidden; top:-10px; }
+		to { visibility: visible; top: 0px; }
+	}
+	.content div:hover a {
+		animation: move_content_a 0.6s ease ;
+		animation-fill-mode: forwards;
+	}
+	@keyframes move_content_a {
+		0% { margin-left: 0px; }
+		25% { margin-left: -10px; }
+		75% { margin-left: 10px; }
+		100% { margin-left: 0px; }
+	}
+	@keyframes next_day_move {
+		from { right:-20px; }
+		to { right:0px; }
+	}
+	@keyframes prev_day_move {
+		from { left:-20px; }
+		to { left:0px; }
+	}
+	.row_effect{
+			animation:move 0.6s ease;
+		}
+		@keyframes move{
+			0% {
+				transform:translateX(-100%);
+				opacity: 0;
+			}
+			100%{
+				transform:translateX(0);
+				opacity: 1;
+			}
+		}
+</style>
+<script type="text/javascript" src="../js/Move.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	function myImages(){
+		function Image(){
+			this.oDiv_day12;
+			this.oUl_day12;
+			this.iNow = 0;
+			this.isFinish = false;
+		}
+		Image.prototype.init = function(){
+			this.begin();
+
+		}
+		Image.prototype.begin = function(){
+			var This = this;
+			this.oDiv_day12 = document.getElementById("wrap_day12");
+			this.oUl_day12 = document.getElementById("ul_day12");
+			this.mordf = document.getElementById("mordf");
+			this.image_day14 = document.getElementById("image_day14");
+			this.aLi_day12 = this.oUl_day12.getElementsByTagName("li");
+			this.imgs_day12 = this.oUl_day12.getElementsByTagName("img");
+			this.prev_day12 = document.getElementById("prev_day12");
+			this.next_day12 = document.getElementById("next_day12");
+			this.winH = document.documentElement.clientHeight;
+			this.move_right = document.querySelectorAll(".move_right");
+			this.len = this.aLi_day12.length;
+			This.getSize(This)
+			window.onscroll = function(){	
+				This.move(This);
+			}
+			window.onload = function(){
+				This.move(This);
+			}
+			window.onresize = function(){
+				This.getSize(This);
+				This.doSomeThing(This);
+			}
+		}
+		Image.prototype.getSize = function(This){
+			var self = This || this;
+			self.oUl_day12.style.width = self.oDiv_day12.offsetWidth*self.len+"px";
+			for(var i = 0; i<self.len; i++){
+				self.imgs_day12[i].style.width = self.oDiv_day12.offsetWidth+"px";
+			}
+			self.oDiv_day12.style.height = self.imgs_day12[0].offsetHeight + "px";
+			self.prev_day12.style.top = "50%";
+			self.next_day12.style.top = "50%";
+			self.height = parseInt(480/1753*self.mordf.offsetWidth) +"px";
+			self.mordf.setAttribute("style","background:url('../images/mordf.jpg')0 0 no-repeat; background-size:100%; height:"+self.height);
+			self.height2 = parseInt(195/1920*self.image_day14.offsetWidth)+100 +"px";
+			self.image_day14.setAttribute("style","margin-right:0px; margin-left:0px;background:url('../images/pd-photo.jpg')0 0 no-repeat; background-size:100%; height:"+self.height2);
+			self.oDiv_day12.style.overflow = "hidden";
+			self.prev_day12.onclick = function(){
+				if(!self.isFinish){
+					self.isFinish = true;
+					self.iNow++;
+					if(self.iNow > 0){
+						self.iNow = -(self.len-1);
+					}
+					self.doSomeThing(self);
+				}
+			}
+			self.next_day12.onclick = function(){
+				if(!self.isFinish){
+					self.isFinish = true;
+					self.iNow--;
+					if(self.iNow <=-self.len){
+						self.iNow = 0;
+					}
+					self.doSomeThing(self);
+				}
+			}
+		}
+		Image.prototype.move = function(This){
+			for(var i=0;i<This.move_right.length;i++){
+				var top = This.move_right[i].getBoundingClientRect().top;
+				if( 0 < top && top < This.winH){
+					console.log(This.winH);
+					This.move_right[i].classList.add("row_effect");
+				}
+			}
+		}
+		Image.prototype.doSomeThing = function(This){
+			var self = This ||this;
+			var Target = self.iNow*self.imgs_day12[0].offsetWidth;
+			console.log(Target);
+			startMove(self.oUl_day12,{"left":Target},1000,"linear",function(){self.isFinish = false;})
+		}
+		var oImg = new Image();
+		oImg.init();
+	}
+	function myImages2(){
+		function Image(){
+			this.timer = null;
+			this.iNow = 0;
+			this.toggle = true;
+			this.isFinish = false;
+		}
+		Image.prototype.init = function(){
+			this.oDiv_day12 = document.getElementById("main_right2");
+			this.oUl_day12 = document.getElementById("main_right_ul");
+			this.aLi_day12 = this.oUl_day12.getElementsByTagName("li");
+			this.prev_day13 =  document.getElementById("prev_list");
+			this.next_day13 =  document.getElementById("next_list");
+			this.len = this.aLi_day12.length;
+			this.aLi_w = this.aLi_day12[0].offsetWidth;
+			this.img();
+			this.prev();
+			this.next();
+		}
+		Image.prototype.img = function(){
+			this.autoMove();
+			this.stopMove();
+		}
+		Image.prototype.autoMove = function(){
+			var This = this;
+			clearInterval(this.timer);
+			this.timer = setInterval(function(){
+				This.doSomeThing(This);
+			},3000)
+		}
+		Image.prototype.prev = function(){
+			var This = this;
+			this.prev_day13.onclick = function(){
+				if(!This.isFinish){
+					This.isFinish = true;
+					This.iNow--;
+					This.doSomeThing(This);
+				}
+			}
+		}
+		Image.prototype.next = function(){
+			var This = this;
+			this.next_day13.onclick = function(){
+				if(!This.isFinish){
+					This.isFinish = true;
+					This.iNow++;
+					This.doSomeThing(This);
+				}
+			}
+		}
+		Image.prototype.doSomeThing = function(This){
+			var self = This || this;
+			if(self.toggle){
+				self.iNow--;
+			}
+
+			if(self.iNow <= -self.len){
+				self.iNow = 0;
+			}else if(self.iNow > 0){
+				self.iNow = -(self.len-1);
+			}
+			startMove(self.oUl_day12,{ "left" : self.iNow*self.aLi_w},1000,"linear",function(){self.isFinish = false;});
+		}
+		Image.prototype.stopMove = function(){
+			var This = this;
+			this.oDiv_day12.onmouseover = function(){
+				This.toggle = false;
+				clearInterval(This.timer);
+			}
+			this.oDiv_day12.onmouseout = function(){
+				This.toggle = true;
+				This.autoMove();
+			}
+		}
+		var Img =  new Image();
+		Img.init();
+	}
+	function myImages3(){
+		function Image(){
+			this.toggle = true;
+			this.isFinish = false;
+			this.iNow = 0;
+		}
+		Image.prototype.init = function(oDiv_id){
+			this.begin(oDiv_id);
+			this.images();
+			this.prev();
+			this.next();
+		}
+		Image.prototype.begin = function(oDiv_id){
+			this.oDiv_day12 = document.getElementById(oDiv_id);
+			this.prev_day12 = document.getElementById("prev_run");
+			this.next_day12 = document.getElementById("next_run");
+			this.oUl_day12 = this.oDiv_day12.getElementsByTagName("ul")[0];
+			this.aLi_day12 = this.oUl_day12.getElementsByTagName("li");
+			
+			this.len = this.aLi_day12.length;
+			this.aLi_w = this.aLi_day12[0].offsetWidth;
+		}
+		Image.prototype.images = function(){
+			this.autoMove();
+			this.stopMove();
+		}
+		Image.prototype.autoMove = function(){
+			var This = this;
+			clearInterval(this.timer);
+			this.timer = setInterval(function(){
+				This.doSomeThing(This);
+			},1500);
+		}
+		Image.prototype.stopMove = function(){
+			var This = this;
+			this.oDiv_day12.onmouseover = function(){
+				This.toggle = false;
+				clearInterval(This.timer);
+			}
+			this.oDiv_day12.onmouseout = function(){
+				This.toggle = true;
+				This.autoMove();
+			}
+		}
+		Image.prototype.prev = function(){
+			var This = this;
+			this.prev_day12.onclick = function(){
+				This.iNow--;
+				This.doSomeThing(This);
+			}
+
+		}
+		Image.prototype.next = function(){
+			var This = this;
+			this.next_day12.onclick = function(){
+				This.iNow++;
+				This.doSomeThing(This);
+			}
+		}
+		Image.prototype.doSomeThing = function(This){
+			var self = This || this;
+			if(self.toggle){
+				self.iNow--;
+			}
+			if(self.iNow <=-self.len){
+				self.iNow = 0;
+			}else if(self.iNow > 0){
+				self.iNow = -(self.len-1);
+			}
+			startMove(self.oUl_day12,{ "left": self.iNow*self.aLi_w},500, "linear", function(){});
+		}
+		var img = new Image();
+		img.init("run_day13");
+	}
+	function myImages4(){
+		function Image(){
+			this.toggle = true;
+			this.isFinish = false;
+			this.iNow = 0;
+		}
+		Image.prototype.init = function(){
+			this.begin();
+			this.images();
+			this.prev();
+			this.next();
+		}
+		Image.prototype.begin = function(){
+			this.oDiv_day13 = document.getElementById("science_center");
+			this.oUl_day13 = document.getElementById("science_center_ul");
+			this.prev_day13 = document.getElementById("science_prev");
+			this.next_day13 = document.getElementById("science_next");
+			this.aLi_day13 = this.oUl_day13.getElementsByTagName("li");
+			this.aLi_w = this.aLi_day13[0].offsetWidth;
+			this.len = this.aLi_day13.length;
+		}
+		Image.prototype.images = function(){
+			this.autoMove();
+			this.stopMove();
+		}
+		Image.prototype.autoMove = function(){
+			var This = this;
+			clearInterval(this.timer);
+			this.timer = setInterval(function(){
+				This.doSomeThing(This);
+			},2000)
+		}
+		Image.prototype.stopMove = function(){
+			var This = this;
+			this.oDiv_day13.onmouseover = function(){
+				This.toggle = false;
+				clearInterval(This.timer);
+			}
+			this.oDiv_day13.onmouseout = function(){
+				This.toggle = true;
+				This.autoMove();
+			}
+		}
+		Image.prototype.prev = function(){
+			var This = this;
+			this.prev_day13.onclick = function(){
+				This.iNow--;
+				This.doSomeThing(This);
+			}
+		}
+		Image.prototype.next = function(){
+			var This = this;
+			this.next_day13.onclick = function(){
+				This.iNow++;
+				This.doSomeThing(This);
+			}
+		}
+		Image.prototype.doSomeThing = function(This){
+			var self = This || this;
+			if(self.toggle){
+				self.iNow--;
+			}
+			if(self.iNow<=-self.len){
+				self.iNow = 0;
+			}else if(self.iNow>0){
+				self.iNow=-(self.len-1);
+			}
+			startMove(self.oUl_day13, {"left":self.iNow*self.aLi_w},1000,"linear",function(){});
+		}
+		var img = new Image();
+		img.init();
+	}
+	function myImages5(){
+		function Image(){
+			this.iNow = 0;
+			this.toggle = true;
+			this.isFinish = false;
+		}
+		Image.prototype.init = function(){
+			this.begin();
+			this.images();
+			this.prev();
+			this.next();
+		}
+		Image.prototype.begin = function(){
+			this.oDiv_day13 = document.getElementById("left_wrap");
+			this.oUl_day13 = document.getElementById("left_ul1");
+			this.aLi_day13 = this.oUl_day13.getElementsByTagName("li");
+			this.aLi_w = this.aLi_day13[0].offsetWidth;
+			this.len = this.aLi_day13.length;
+			this.prev_day13 = document.getElementById("prev_left");
+			this.next_day13 = document.getElementById("next_left");
+		}
+		Image.prototype.images = function(){
+			this.autoMove();
+			this.stopMove();
+		}
+		Image.prototype.prev = function(){
+			var This = this;
+			this.prev_day13.onclick = function(){
+				if(!This.isFinish){
+					This.iNow--;
+					This.doSomeThing(This);
+				}
+			}
+		}
+		Image.prototype.next = function(){
+			var This = this;
+			this.next_day13.onclick = function(){
+				if(!This.isFinish){
+					This.iNow++;
+					This.doSomeThing(This);
+				}
+			}
+		}
+		Image.prototype.autoMove = function(){
+			var This = this;
+			clearInterval(this.timer);
+			this.timer = setInterval(function(){
+				This.doSomeThing(This);
+			},2000);
+		}
+		Image.prototype.stopMove = function(){
+			var This = this;
+			this.oDiv_day13.onmouseover = function(){
+				This.toggle = false;
+				clearInterval(This.timer);
+			}
+			this.oDiv_day13.onmouseout = function(){
+				This.toggle = true;
+				clearInterval(This.timer);
+				This.autoMove();
+			}
+		}
+		Image.prototype.doSomeThing = function(This){
+			var self = This || this;
+			if(self.toggle){
+				self.iNow--;
+			}
+			if(self.iNow<= -self.len){
+				self.iNow = 0;
+			}else if(self.iNow>0){
+				self.iNow = -(self.len-1);
+			}
+			startMove(self.oUl_day13,{ "left":self.iNow*self.aLi_w},1000,"linear", function(){});
+		}
+		var img = new Image();
+		img.init();
+	}
+	myImages();
+	myImages2();
+	myImages3();
+	myImages4();
+	myImages5();
+
+}
+</script>
+</head>
+<body>
+<div id="prev_day12"><</div>
+<div id="next_day12">></div>
+<div class="box">
+	<div class="logo">
+		<span class="spam_m"></span>
+		<span class="spam_e"></span>
+		<span class="spam_n"></span>
+		<span class="spam_u"></span>
+		<div class="logo_img"></div>
+	</div>
+	<ul class="list">
+		<li>力帆首页
+			<div class="content">
+				<div><a href="#">公司简介1</a></div>
+				<div><a href="#">公司简介1</a></div>
+				<div><a href="#">公司简介1</a></div>
+				<div><a href="#">公司简介1</a></div>
+				<div><a href="#">公司简介1</a></div>
+			</div>
+		</li>
+		<li>车型展示
+			<div class="content">
+				<div><a href="#">公司简介2</a></div>
+				<div><a href="#">公司简介2</a></div>
+				<div><a href="#">公司简介2</a></div>
+				<div><a href="#">公司简介2</a></div>
+				<div><a href="#">公司简介2</a></div>	
+			</div>
+		</li>
+		<li>品牌专区
+			<div class="content">
+				<div><a href="#">公司简介3</a></div>
+				<div><a href="#">公司简介3</a></div>
+				<div><a href="#">公司简介3</a></div>
+				<div><a href="#">公司简介3</a></div>
+				<div><a href="#">公司简介3</a></div>	
+			</div>
+		</li>
+		<li>资讯中心
+			<div class="content">
+				<div><a href="#">公司简介4</a></div>
+				<div><a href="#">公司简介4</a></div>
+				<div><a href="#">公司简介4</a></div>
+				<div><a href="#">公司简介4</a></div>
+				<div><a href="#">公司简介4</a></div>	
+			</div>
+		</li>
+		<li>服务指南
+			<div class="content">
+				<div><a href="#">公司简介5</a></div>
+				<div><a href="#">公司简介5</a></div>
+				<div><a href="#">公司简介5</a></div>
+				<div><a href="#">公司简介5</a></div>
+				<div><a href="#">公司简介5</a></div>	
+			</div>
+		</li>
+		<li>车主专区
+			<div class="content">
+				<div><a href="#">公司简介6</a></div>
+				<div><a href="#">公司简介6</a></div>
+				<div><a href="#">公司简介6</a></div>
+				<div><a href="#">公司简介6</a></div>
+				<div><a href="#">公司简介6</a></div>	
+			</div>
+		</li>
+		<li>联系力帆
+			<div class="content">
+				<div><a href="#">公司简介7</a></div>
+				<div><a href="#">公司简介7</a></div>
+				<div><a href="#">公司简介7</a></div>
+				<div><a href="#">公司简介7</a></div>
+				<div><a href="#">公司简介7</a></div>	
+			</div>
+		</li>
+	</ul>
+</div>
+<div id="images" class="w1800">
+	<div id="wrap_day12">
+		<ul id="ul_day12">
+			<li><a href="#"><img src="../images/0.jpg" alt=""></a></li>
+			<li><a href="#"><img src="../images/1.jpg" alt=""></a></li>
+			<li><a href="#"><img src="../images/2.jpg" alt=""></a></li>
+		</ul>
+	</div>
+</div>
+<div id="main_day12" class="w1800">
+	<div class="w1190 main_day12_door">
+		<div class="main_smail"></div>
+		<div class="main_centent">
+		<div class="main_left">
+			<div class="main_left2">
+				<h2></h2>
+				<p>智汇全球顶级汽车产业一流技术，近1000余项实验，数10种极端路况考验，总路试历程超200万公里，如此严苛测试均为您保证您的座驾稳定性和耐久品质。如此淬炼方能在同级车中领先通过“欧盟E-MARK”认证。</p>
+				<div class="div_main1 move_right"><a href="#"><img src="../images/pic_main1.gif" alt=""></a></div>
+			</div>
+			<div class="main_left3">
+				<h2></h2>
+				<p>最高要求的全面被动安全标准，让您的座驾称为值得信赖和托付的全能伙伴。成功，不仅仅是财富更是家人的笑容。力帆820为爱而生，伴随您的事业和家庭前行道路畅行无忧</p>
+				<div class="div_main1 move_right"><a href="#"><img src="../images/pic_main2.jpg" alt=""></a></div>
+			</div>
+		</div>
+			<div class="main_center">
+				<div class="main_center_img1">
+					<img src="../images/main_center_img1.gif" alt="">
+				</div>
+				<div class="main_car">
+					<p><span>•</span>同级领先配备ABS轮速采集系统</p>
+					<p><span>•</span>整车警示灯全部由LED灯组成</p>
+					<p><span>•</span>全系标配四轮碟刹</p>
+					<p><span>•</span>ISO-FIX儿童安全座椅贴身护佑</p>
+				</div>
+			</div>
+			<div class="main_right">
+				<div class="main_right1">
+					<h2></h2>
+					<ul>
+						<li  class="move_right">
+							<div class="main_list"><a href="#"><img src="../images/list1.gif"></a></div>
+							<div class="main_list2">
+								<h4>运动豪华的前脸，彰显车主潮流品味</h4>
+								<p>前脸设计大气前卫，采用大面积的六边形镀铬中央进气格栅，与科技动感的鹰眼式大灯，更显凌厉个性，凸显车主豪华气息。</p>
+							</div>
+						</li>
+						<li class="move_right">
+							<div class="main_list"><a href="#"><img src="../images/list2.gif"></a></div>
+							<div class="main_list2">
+								<h4>鹰眼式大灯</h4>
+								<p>以鹰眼为基础，根据仿生学设计的鹰眼前大灯，犀利有神，夜间行车时不仅照射亮度高，且照射距离远，任凭刮风下雨，为您照亮前行的路。</p>
+							</div>
+						</li>
+						<li class="move_right">
+							<div class="main_list"><a href="#"><img src="../images/list3.gif"></a></div>
+							<div class="main_list2">
+								<h4>4位一体智能后视镜</h4>
+								<p>集成式框架结构后视镜，不仅集成转向灯，更有整体电动折叠、后视镜面电动调节功能，减少行驶振动大大提升侧身高档豪华感</p>
+							</div>
+						</li>
+						<li class="move_right">
+							<div class="main_list"><a href="#"><img src="../images/list4.gif"></a></div>
+							<div class="main_list2">
+								<h4>双模式电动防夹天窗</h4>
+								<p>双模式电动天窗通风、换气，让空气变得更清新、均匀。具备防夹功能的电动天窗，更加安全可靠，双模式选择，一键控制。</p>
+							</div>
+						</li>
+						<li class="move_right">
+							<div class="main_list"><a href="#"><img src="../images/list5.gif"></a></div>
+							<div class="main_list2">
+								<h4>十幅烤漆铝合金轮毂</h4>
+								<p>轮胎总成采用世界级B级家轿搭配组合——16寸烤漆铝合金轮毂+扁平轮胎，让车侧身运动力量感暴增，更彰显稳重大气风范。</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="main_right2" class="move_right">
+					<ul id="main_right_ul">
+						<li>
+							<a href="#"><img src="../images/20160530-14.gif"></a>
+							<h2><img src="../images/20160530-15.png" alt=""></h2>
+							<p>整车碰撞标准按照C-NCAP五星安全设计，车身近50%采用高强度钢板，由机器人焊接，大大提升整车安全性，更能为您和家人出行保驾护航。</p>
+						</li>
+						<li>
+							<a href="#"><img src="../images/20160530-16.gif"></a>
+							<h2><img src="../images/20160530-17.png" alt=""></h2>
+							<p>整车碰撞标准按照C-NCAP五星安全设计，车身近50%采用高强度钢板，由机器人焊接，大大提升整车安全性，更能为您和家人出行保驾护航。</p>
+						</li>
+						<li>
+							<a href="#"><img src="../images/20160530-18.gif"></a>
+							<h2><img src="../images/20160530-19.png" alt=""></h2>
+							<p>整车碰撞标准按照C-NCAP五星安全设计，车身近50%采用高强度钢板，由机器人焊接，大大提升整车安全性，更能为您和家人出行保驾护航。</p>
+						</li>
+						<li>
+							<a href="#"><img src="../images/20160530-20.gif"></a>
+							<h2><img src="../images/20160530-21.png" alt=""></h2>
+							<p>整车碰撞标准按照C-NCAP五星安全设计，车身近50%采用高强度钢板，由机器人焊接，大大提升整车安全性，更能为您和家人出行保驾护航。</p>
+						</li>
+					</ul>
+					<div id="prev_list"><</div>
+					<div id="next_list">></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="main_day13" class="w1800">
+	<div class="w1190 main_day13_door">
+		<h2 class="move_right"><img src="../images/dl1.png" alt=""></h2>
+		<p class="move_right">运筹帷幄于商场，决胜于千里之外。全新高性能2.4L VVT全铝芯引擎，搭载澳大利亚DSI6 速手自一体变速器，拥有强大功率和扭矩，酣畅动力正如鏖战商场，
+身未动心已远，君临天下。高效能全铝芯1.8L VVT发动机助君驰骋，尽享速度与激情同时。大幅降低整车油耗与排放</p>
+	</div>
+</div>
+<div class="mordf w1800" id="mordf"></div>
+<div id="img_text" class="w1800">
+	<div class="img_text_day13 w1190">
+		<div class="img_day13 move_right">
+			<img src="../images/imfg1.gif">
+			<div id="run_day13" class="img_centent">
+				<ul>
+					<li>
+						<h4>1.8L VVT全铝芯高效能引擎，更省油</h4>
+						<p>高效能全铝芯1.8L VVT发动机，最大功率98kw/6000rpm，最大扭矩168N·m/4200-4400rpm，整车油耗与排放水平大幅降低，提高燃油经济性的同时，为您带来前所未有的驾乘快感。</p></li>
+					<li>
+						<h4>2.4L VVT全铝芯高性能引擎，释放澎湃动力</h4>
+						<p>全新高性能2.4L VVT全铝芯引擎，最大功率123kw/5700rpm，最大扭矩226N·m/4000-4500rpm，节能高效，性能可靠，让每一滴燃油使用到极致，少</p>
+					</li>
+					<li>
+						<p>许的付出就能获得强劲的动力体验，傲视同级车型，满足您对速度与激情的追求。</p>
+					</li>
+				</ul>
+				<div id="prev_run"></div>
+				<div id="next_run"></div>
+			</div>
+			<div class="img_centent3">
+				<img src="../images/imfg2.gif">
+				<div>缜密布局的发动机舱</div>
+			</div>
+			<img src="../images/imfg3.gif">
+			<div class="img_centent2">
+				<h4>澳大利亚DSI 6速手自一体变速器</h4>
+				<p>尽可随意切换自动挡的舒适与手动挡的乐趣，不仅换挡平衡，操控更加自如，而且出色的提升了燃油经济性。</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="science" class="w1800">
+	<div class="w1190 science_day13">
+		<h2 class="move_right"></h2>
+		<p class="p1 move_right">科技不仅是一种进步，更是一种关怀。任座驾一路飞驰，让心情平静下来放慢节奏，留心眼前的风景，只为给您带来更愉悦的驾乘感受。
+		领先同级车多项智能科技配置，让您一切尽在掌握。</p>
+	<div class="science_centent">
+		<div class="science_left move_right">
+			<p class="img_p"><img src="../images/imf1.png" alt=""></p>
+			<p class="p2">40km/h至130km/h时即可松开油门踏板，车辆以设定的车速恒速行驶，在长时间高速行驶时，有效减少驾车人员疲劳，安全更惬意。</p>
+			<img src="../images/dfls1.gif" alt="">
+		</div>
+		<div class="science_center" id="science_center">
+			<ul id="science_center_ul">
+				<li>
+					<img src="../images/dkf.gif" alt="">
+					<div class="science_text">
+						<p>● 同级领先配备一键智能关天窗系统</p>
+						<p>● 同级领先配备GSI行车换挡提示系统</p>
+						<p>● 同级领先配备多CAN-BUS智能控制单元</p>
+						<p>● 全系标配智能10位一体ECU行车电脑显示系统</p>
+						<p>● 手机智能互联系统</p>
+					</div>
+				</li>
+				<li>
+					<img src="../images/dkf2.gif" alt="">
+					<div class="science_text">
+						<p>● 同级车领先配备超广视觉高清“倒车影像+倒车轨迹辅助系统”</p>
+						<p>● 同级领先配备CCS定速巡航系统，尽享舒适驾乘 40km/h至130km/h时即可松开油门踏板，车辆以设定的车速恒速行驶，在长时间高速行驶时，有效减少驾车人员疲劳，安全更惬意。</p>
+					</div>
+				</li>
+				<li>
+					<img src="../images/dkf3.gif" alt="">
+					<div class="science_text">
+						<p>领先配备“无钥匙进入+智能一键启动系统</p>
+					</div>
+				</li>
+			</ul>
+			<div id="science_prev"><</div>
+			<div id="science_next">></div>
+		</div>
+		<div class="science_right move_right">
+			<p class="img_p_r2"><img src="../images/imf2.png" alt=""></p>
+			<p class="p2_r">针对中国城市路况精心调校的麦弗逊式独立前悬架、多连杆独立后悬架，完美平衡的操控性与舒适性，有效隔绝路面震动和噪音的同时，乘坐舒适性达同级最优。</p>
+			<img src="../images/dfls2.gif" alt="">
+		</div>
+	</div>
+	</div>
+</div>
+<div id="left" class="w1800">
+	<div class="w1190 left_day13">
+		<h2><img src="../images/tys.png" alt=""></h2>
+		<p class="left_p1">世界那么大，越过千山万水，最美的风景总在前方，最浓的乡愁萦绕身后。</p>
+		<p class="left_p2">力帆820人性化科技体验，懂生活更懂你心。即使家的温馨在路的前方，但一路的舒适仿佛让你从未离家</p>
+		<div id="left_wrap" class="move_right">
+			<ul id="left_ul1">
+				<li>
+					<img src="../images/tyban1.gif">
+					<div class="left_text_day14">6扬声器剧院级音响系统 <a href="#">预约试驾>></a></div>
+				</li>
+				<li><img src="../images/tyban2.gif">
+					<div class="left_text_day14">10寸（可选）高清触摸显示屏 <a href="#">预约试驾>></a></div>
+				</li>
+				<li>
+					<img src="../images/tyban3.gif">
+					<div class="left_text_day14">多功能真皮方向盘，影音弹指之间 <a href="#">预约试驾>></a></div>
+				</li>
+				<li>
+					<img src="../images/tyban4.png">
+					<div class="left_text_day14">同级车唯一配备Easy Open行李箱感应式开启 <a href="#">预约试驾>></a></div>
+				</li>
+				<li>
+					<img src="../images/tyban5.png">
+					<div class="left_text_day14">双塔式仪表盘 <a href="#">预约试驾>></a></div>
+				</li>
+			</ul>
+			<div id="prev_left"><</div>
+			<div id="next_left">></div>
+		</div>
+	</div>
+</div>
+<div id="image_day14" class="w1800">
+	<div class="content_day14">
+		<div class="content_day14_left">sdfasfas</div>
+		<div class="content_day14_right">sdfafds</div>
+	</div>
+</div>
+<div id="login">
+	<div class="ct-photo">
+		<h2>CONTACT　联系我们</h2>
+		<div class="w1190">
+			<div class="login_left">
+				<h4 class="move_right">重庆力帆汽车销售有限公司</h4>
+				<p class="move_right">地址：重庆市北部新区经开园金开大道1539号</p>
+				<p class="move_right">邮编：401122</p>
+				<p class="move_right">电话：400-0601-777</p>
+				<div class="move_right"><a class="a1" href="#"></a><a class="a2" href="#"></a></div>
+			</div>
+			<div class="login_right">
+				<form>
+					<input class="move_right" type="text" value="姓名">
+					<input class="move_right" type="text" value="电话">
+					<textarea class="move_right">内容</textarea>
+					<button class="move_right">提交</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p class="move_right"><span>技术支持：</span><a href="#">红杉.REDSUNG</a><span>　©重庆力帆汽车销售有限公司版权所有 渝ICP证020102号　　</span><strong>︽</strong></p>
+</div>
+</body>
+</html>
